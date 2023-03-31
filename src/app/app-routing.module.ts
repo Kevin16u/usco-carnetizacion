@@ -8,6 +8,10 @@ const routes: Routes = [
     loadChildren: () => import('./security/security.module').then((m) => m.SecurityModule),
   },
   {
+    path: 'components',
+    loadChildren: () => import('./components/component.module').then((m) => m.ComponentsModule),
+  },
+  {
     path:'**',
     redirectTo:'security/sign-in'
   }
