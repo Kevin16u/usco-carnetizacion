@@ -11,7 +11,7 @@ export class ComponentsComponent {
   @ViewChild('sidenav') sidenav!: MatSidenav;
 
   summiting: boolean = false;
-  opened = true;
+  opened = false;
   name: String = ''
 
   constructor(

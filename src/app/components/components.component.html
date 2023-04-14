@@ -1,11 +1,14 @@
 <mat-toolbar class="header" style="border-bottom: 1px solid; justify-content: space-between; height: 90px;">
+  <button mat-icon-button (click)="sidenav.toggle()" class="menu-button" *ngIf="isBiggerScreen() == false">
+    <mat-icon>menu</mat-icon>
+  </button>
   <span class="toolbar-spacer"></span>
   <button mat-raised-button color="warn" (click)="signOut()">Cerrar Sesión
       <span *ngIf="summiting" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
   </button>
 </mat-toolbar>
 <mat-sidenav-container >
-  <mat-sidenav #sidenav [mode]="isBiggerScreen() ? 'over' : 'side'" [(opened)]="opened" [fixedInViewport]="true"
+  <mat-sidenav #sidenav  [(opened)]="opened" [fixedInViewport]="true"
       [fixedTopGap] style="width: 200px; background-color: #1E262B;">
       <mat-nav-list style="width: 300px;">
           <a class="primary-button" mat-list-item routerLink="/components/profile" routerLinkActive="active">

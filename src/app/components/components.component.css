@@ -5,3 +5,10 @@ mat-sidenav mat-icon {
 img {
   border-radius: 50%;
 }
+
+.menu-button {
+  position: absolute;
+  top: 12px;
+  right: 80%;
+  z-index: 1;
+}
